@@ -22,6 +22,6 @@ io.on("connection", (socket) => {
 });
 
 const PORT = process.env.PORT || 3000; // Utilisation du port dynamique
-http.listen(PORT, () => {
-  console.log(`Serveur lancé sur http://localhost:${PORT}`);
+http.listen(process.env.PORT || 3000, "0.0.0.0", () => {
+  console.log(`Serveur lancé sur http://localhost:${process.env.PORT || 3000}`);
 });
